@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+var app = require('../app');
+var http = require('http').Server(app);
+
+var server = http.listen(app.get('port'), function() {
+
+})

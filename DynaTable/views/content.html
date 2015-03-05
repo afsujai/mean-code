@@ -1,0 +1,60 @@
+<html>
+    <head lang="en">
+        <meta charset="utf-8">
+        <title>Dyna Table</title>
+        <link rel="stylesheet" type="text/css" href="js/datatable/css/jquery.dataTables.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script src="js/datatable/js/jquery.js"></script>
+        <script type="text/javascript" language="javascript" src="js/datatable/js/jquery.dataTables.js"></script>
+        <script type="text/javascript" language="javascript" class="init">
+
+
+        $(document).ready(function() {
+        	$('#example').dataTable( {
+        		"aoColumns": [
+        			null,
+        			null,
+        			{ "orderSequence": [ "asc" ] },
+        			{ "orderSequence": [ "desc", "asc", "asc" ] },
+        			{ "orderSequence": [ "desc" ] },
+        			null
+        		]
+        	} );
+        } );
+
+
+	</script>
+
+    </head>
+<body>
+    <button class="btn" ng-click="addItem()" >Add Item</button>
+    <table id="example" class="display" cellspacing="0" width="100%">
+      <tbody>
+					<tr>
+						<td>Donna Snider</td>
+						<td>Customer Support</td>
+						<td>New York</td>
+						<td>27</td>
+						<td>2011/01/25</td>
+						<td>$112,000</td>
+					</tr>
+          					<tr>
+						<td>Shad Decker</td>
+						<td>Regional Director</td>
+						<td>Edinburgh</td>
+						<td>51</td>
+						<td>2008/11/13</td>
+						<td>$183,000</td>
+					</tr>
+					<tr>
+						<td>Michael Bruce</td>
+						<td>Javascript Developer</td>
+						<td>Singapore</td>
+						<td>29</td>
+						<td>2011/06/27</td>
+						<td>$183,000</td>
+					</tr>
+				</tbody>
+			</table>
+</body>
+</html>

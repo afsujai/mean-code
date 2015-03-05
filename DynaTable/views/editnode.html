@@ -1,0 +1,36 @@
+<html>
+<script>
+function addNewAttr() {
+  var attrsNode = document.getElementById("attrs");
+  var count = 0;
+  var children = attrsNode.getElementsByTagName("input");
+  if(children != null)
+   count = children.length;
+   count++;
+  attrsNode.innerHTML = attrsNode.innerHTML + "<br> <label> Attribute"+count+": &nbsp;&nbsp;<input type=\"text\" name=\"attrName"+count+"\" /><br>";
+}
+</script>
+<body>
+  <h1>Edit The Type</h1>
+      <form>
+      <fieldset>
+      <legend>Type Name</legend>
+       <label>
+       Name:
+       <input type="text" name="typeName" />
+       </label>
+      </fieldset>
+      <fieldset >
+       <legend>Attributes</legend>
+       <span id="attrs">
+       </span>
+       <br><button name="AddItem" onClick="addNewAttr();return false;">Add Item</button>
+      </fieldset>
+
+      <p>
+       <input type="submit" value="Submit Changes"/>
+      </p>
+      </form>
+
+</body>
+</html>
